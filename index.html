@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Richard Presents Development Hub</title>
-<meta name="description" content="Free Starfield tools and references: console commands, item IDs, locations, game settings, record types and Nexus Mods trends.">
+<meta name="description" content="Free Starfield tools and references: console commands, item IDs, locations, game settings, record types, Nexus Mods trends, and modding tools (sfmodcheck, papyrus-log-check, BuildKit).">
 <style>
 :root {
   --bg: #f6f7f9; --surface: #ffffff; --panel2: #f0f2f5; --fg: #1c2230; --muted: #5d6678; --line: #dde1e8; --accent: #3b5bdb;
@@ -84,14 +84,19 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <li><a href="https://taosecurity.github.io/starfield-game-settings/">&nbsp;&nbsp;Game Settings</a></li>
   <li><a href="https://taosecurity.github.io/starfield-globals-quests/">&nbsp;&nbsp;Globals and Quests</a></li>
   <li><a href="https://taosecurity.github.io/starfield-record-types/">&nbsp;&nbsp;Record Types</a></li>
+  <li class="gap"><a href="#tools">Modding tools <span>3</span></a></li>
+  <li><a href="https://github.com/taosecurity/sfmodcheck">&nbsp;&nbsp;sfmodcheck</a></li>
+  <li><a href="https://github.com/taosecurity/papyrus-log-check">&nbsp;&nbsp;papyrus-log-check</a></li>
+  <li><a href="https://github.com/taosecurity/BuildKit">&nbsp;&nbsp;BuildKit</a></li>
   <li class="gap"><a href="#about">About</a></li>
 </ul></nav>
 <main>
 <header id="top">
-  <p class="eyebrow">7 sites &middot; Starfield 1.16.244.0 &middot; built 2026-11-09 15:46 UTC</p>
+  <p class="eyebrow">7 sites &middot; 3 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-12 04:22 UTC</p>
   <h1>Richard Presents Development Hub</h1>
   <p class="lede">These are free tools and references for Starfield players and modders: console commands, item and place IDs, game settings, globals and quests,
-  the record types behind every plugin, and how Starfield modding is doing on Nexus Mods. Everything is read from the game's own files and kept up to date after game updates.</p>
+  the record types behind every plugin, and how Starfield modding is doing on Nexus Mods. The lists are read from the game's own files and kept up to date after game updates.
+  The modding tools check plugins and Papyrus logs and help build plugins from code.</p>
   <p class="byline">By <a href="https://github.com/taosecurity" target="_blank" rel="noopener">Richard Bejtlich</a> &middot; <a href="https://www.youtube.com/@RichardBejtlich" target="_blank" rel="noopener">Richard Presents Starfield Essentials</a> on YouTube</p>
 </header>
 <section id="trends">
@@ -116,8 +121,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <h3><a href="https://taosecurity.github.io/starfield-console-commands/">Starfield Console Commands</a></h3>
       <p>It lists every console and script command, with what it does, its parameters and examples you can copy.</p>
       <p class="use">Look up a command and how to type it.</p>
-      <div class="chips"><span class="chip">1,383 commands</span></div>
-      <p class="meta">Starfield 1.16.244.0 &middot; built 2026-11-09</p>
+      <div class="chips"><span class="chip">1,527 commands</span></div>
+      <p class="meta">Starfield 1.16.244.0 &middot; built 2026-11-11</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
     <article class="card" style="--h: 35">
@@ -162,13 +167,44 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </article>
   </div>
 </section>
+<section id="tools">
+  <h2>Modding tools</h2>
+  <p class="lede">These free, open-source programs help mod authors check and build Starfield mods. The two checkers only read your files, and none of the tools makes network connections.</p>
+  <div class="cards">
+    <article class="card" style="--h: 222">
+      <h3><a href="https://github.com/taosecurity/sfmodcheck">sfmodcheck</a></h3>
+      <p>It checks a Starfield plugin (.esm) for problems that break it in the game: broken links, FormIDs out of range, bad headers, scenes, conditions, deleted and identical-to-master records. After each kind of problem it says how to fix it in xEdit or the Creation Kit.</p>
+      <p class="use">Drop your plugin on sfmodcheck.exe before you play or release a mod.</p>
+      <div class="chips"><span class="chip">Windows exe</span><span class="chip">dotnet tool</span><span class="chip">12 checks</span></div>
+      <p class="meta">version 0.4.0 &middot; released 2026-11-09 &middot; <a href="https://github.com/taosecurity/sfmodcheck/releases/tag/v0.4.0" style="position: relative; z-index: 1">download</a></p>
+      <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
+    </article>
+    <article class="card" style="--h: 150">
+      <h3><a href="https://github.com/taosecurity/papyrus-log-check">papyrus-log-check</a></h3>
+      <p>It reads a Starfield Papyrus log and checks it against a rule file for your mod, so each expected log line is reported as PASS, FAIL or NOT SEEN.</p>
+      <p class="use">Check after a test session that your mod&#x27;s scripts did what they should.</p>
+      <div class="chips"><span class="chip">Python 3.9+</span><span class="chip">no extra packages</span></div>
+      <p class="meta">version 0.2.1 &middot; released 2026-11-09 &middot; <a href="https://github.com/taosecurity/papyrus-log-check/releases/tag/v0.2.1" style="position: relative; z-index: 1">download</a></p>
+      <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
+    </article>
+    <article class="card" style="--h: 35">
+      <h3><a href="https://github.com/taosecurity/BuildKit">BuildKit</a></h3>
+      <p>It is a C# library for writing Starfield plugins with Mutagen 0.54.4: it finds the masters, writes plugins the way the Creation Kit does (overridden-forms list, effect data, one thread) and keeps FormIDs stable between builds.</p>
+      <p class="use">Build your mod&#x27;s plugin from code instead of by hand.</p>
+      <div class="chips"><span class="chip">NuGet: Taosecurity.Starfield.BuildKit</span><span class="chip">C# / .NET 9</span></div>
+      <p class="meta">version 0.2.0 &middot; released 2026-11-09 &middot; <a href="https://github.com/taosecurity/BuildKit/releases/tag/v0.2.0" style="position: relative; z-index: 1">download</a></p>
+      <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
+    </article>
+  </div>
+</section>
 <section id="about" class="about">
   <h2>About</h2>
   <ul>
     <li>Each site is a single page that works in any browser, on a phone too, with search built in. There's no sign-up, no ads and no tracking.</li>
     <li>The lists are read from the Steam copy of the game and rebuilt after game updates; each card shows the game version it was built from.</li>
+    <li>The modding tools are open source (GPL-3.0 or MIT). Each tool's card shows its latest version and links to its download page, where every file has a SHA-256 checksum. Each tool's README on GitHub says how to install and use it.</li>
     <li>These are unofficial pages, not made or endorsed by Bethesda. Starfield is a trademark of ZeniMax Media.</li>
-    <li>If you find a mistake or have an idea, open an issue on GitHub for that site: <a href="https://github.com/taosecurity/starfield-console-commands/issues/new" target="_blank" rel="noopener">Console Commands</a>, <a href="https://github.com/taosecurity/starfield-item-ids/issues/new" target="_blank" rel="noopener">Item IDs</a>, <a href="https://github.com/taosecurity/starfield-locations/issues/new" target="_blank" rel="noopener">Locations</a>, <a href="https://github.com/taosecurity/starfield-game-settings/issues/new" target="_blank" rel="noopener">Game Settings</a>, <a href="https://github.com/taosecurity/starfield-globals-quests/issues/new" target="_blank" rel="noopener">Globals and Quests</a>, <a href="https://github.com/taosecurity/starfield-record-types/issues/new" target="_blank" rel="noopener">Record Types</a>, <a href="https://github.com/taosecurity/NexusModsMetrics/issues/new" target="_blank" rel="noopener">Tracking on Nexus Mods</a>. A free GitHub account is needed.</li>
+    <li>If you find a mistake or have an idea, open an issue on GitHub for that site: <a href="https://github.com/taosecurity/starfield-console-commands/issues/new" target="_blank" rel="noopener">Console Commands</a>, <a href="https://github.com/taosecurity/starfield-item-ids/issues/new" target="_blank" rel="noopener">Item IDs</a>, <a href="https://github.com/taosecurity/starfield-locations/issues/new" target="_blank" rel="noopener">Locations</a>, <a href="https://github.com/taosecurity/starfield-game-settings/issues/new" target="_blank" rel="noopener">Game Settings</a>, <a href="https://github.com/taosecurity/starfield-globals-quests/issues/new" target="_blank" rel="noopener">Globals and Quests</a>, <a href="https://github.com/taosecurity/starfield-record-types/issues/new" target="_blank" rel="noopener">Record Types</a>, <a href="https://github.com/taosecurity/NexusModsMetrics/issues/new" target="_blank" rel="noopener">Tracking on Nexus Mods</a>, <a href="https://github.com/taosecurity/sfmodcheck/issues/new" target="_blank" rel="noopener">sfmodcheck</a>, <a href="https://github.com/taosecurity/papyrus-log-check/issues/new" target="_blank" rel="noopener">papyrus-log-check</a>, <a href="https://github.com/taosecurity/BuildKit/issues/new" target="_blank" rel="noopener">BuildKit</a>. A free GitHub account is needed.</li>
   </ul>
 </section>
 <footer>
