@@ -60,6 +60,10 @@ a { color: var(--accent); }
 .card .meta { font: 12px var(--mono); color: var(--muted); }
 .go { font-size: 14px; font-weight: 600; color: var(--accent); }
 .about { max-width: 76rem; }
+.news { background: hsl(205 var(--tint-s) var(--tint-l)); border: 1px solid hsl(205 var(--tint-bd-s) var(--tint-bd-l));
+  border-left: 5px solid hsl(205 65% var(--tint-dot-l)); border-radius: 12px; padding: 14px 18px; }
+.news h2 small { font: 13px var(--mono); color: var(--muted); font-weight: 400; margin-left: 8px; }
+.news ul { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; max-width: 76rem; }
 .about ul { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 4px; }
 @media (max-width: 860px) {
@@ -75,6 +79,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <div class="layout">
 <nav class="toc" aria-label="Sections"><ul>
   <li><a href="#top">Top</a></li>
+  <li class="gap"><a href="#whats-new">What's new</a></li>
   <li class="gap"><a href="#trends">Trends <span>2</span></a></li>
   <li><a href="https://taosecurity.github.io/NexusModsMetrics/">&nbsp;&nbsp;Tracking on Nexus Mods</a></li>
   <li><a href="https://taosecurity.github.io/xbox-top40-tracker/">&nbsp;&nbsp;Xbox Top 40 Tracker</a></li>
@@ -97,7 +102,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 </ul></nav>
 <main>
 <header id="top">
-  <p class="eyebrow">10 sites &middot; 4 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-14 17:44 UTC</p>
+  <p class="eyebrow">10 sites &middot; 4 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-14 18:30 UTC</p>
   <h1>Richard Presents Development Hub</h1>
   <p class="lede">These are free tools and references for Starfield players and modders: console commands, item and place IDs, game settings, globals and quests,
   the record types behind every plugin, every game version, how Starfield modding is doing on Nexus Mods and how much it is played on Xbox. A worked example shows how to trace
@@ -105,6 +110,15 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   The modding tools check plugins and Papyrus logs and help build plugins from code.</p>
   <p class="byline">By <a href="https://github.com/taosecurity" target="_blank" rel="noopener">Richard Bejtlich</a> &middot; <a href="https://www.youtube.com/@RichardBejtlich" target="_blank" rel="noopener">Richard Presents Starfield Essentials</a> on YouTube</p>
 </header>
+<section id="whats-new" class="news">
+  <h2>What's new <small>2026-11-14</small></h2>
+  <p class="lede">These are the changes since the last update on 2026-11-12.</p>
+  <ul>
+    <li><a href="https://taosecurity.github.io/starfield-version-history/"><strong>Starfield Version History</strong></a>: A new list of every Starfield version since the 2023 review build, with dates, kinds of update and links to the patch notes.</li>
+    <li><a href="https://taosecurity.github.io/starfield-scene-hunt/"><strong>Scene Hunt: The Kneeling Mourner</strong></a>: A new worked example traces a grave scene a player saw to the mod that places it, step by step, in a new Worked examples group.</li>
+    <li><a href="https://taosecurity.github.io/xbox-top40-tracker/"><strong>Xbox Top 40 Tracker</strong></a>: The weekly Xbox top-40 tracker for Starfield and ten similar games is now on the hub, with one colour per game and markers for Shattered Space and Free Lanes.</li>
+  </ul>
+</section>
 <section id="trends">
   <h2>Trends</h2>
   <p class="lede">These pages show how Starfield is doing compared with other games: its modding scene on Nexus Mods, and how much people play it on Xbox.</p>
