@@ -39,6 +39,8 @@ h1 { font-size: 28px; font-weight: 700; }
 h2 { font-size: 20px; font-weight: 650; }
 p { margin: 0; }
 header, section { display: grid; gap: 12px; min-width: 0; scroll-margin-top: 16px; }
+.card { scroll-margin-top: 16px; }
+.card:target { outline: 2px solid hsl(var(--h) 60% 50%); outline-offset: 2px; }
 .eyebrow { font: 12.5px/1.3 var(--mono); color: var(--muted); letter-spacing: .02em; }
 .lede { font-size: 16.5px; color: var(--muted); max-width: 76rem; }
 .byline { font-size: 14px; color: var(--muted); }
@@ -81,32 +83,32 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <li><a href="#top">Top</a></li>
   <li class="gap"><a href="#whats-new">What's new</a></li>
   <li class="gap"><a href="#trends">Trends <span>2</span></a></li>
-  <li><a href="https://taosecurity.github.io/NexusModsMetrics/">&nbsp;&nbsp;Tracking on Nexus Mods</a></li>
-  <li><a href="https://taosecurity.github.io/xbox-top40-tracker/">&nbsp;&nbsp;Xbox Top 40 Tracker</a></li>
+  <li><a href="#tracking-on-nexus-mods">&nbsp;&nbsp;Tracking on Nexus Mods</a></li>
+  <li><a href="#xbox-top-40-tracker">&nbsp;&nbsp;Xbox Top 40 Tracker</a></li>
   <li class="gap"><a href="#reference">Console and reference lists <span>7</span></a></li>
-  <li><a href="https://taosecurity.github.io/starfield-console-commands/">&nbsp;&nbsp;Console Commands</a></li>
-  <li><a href="https://taosecurity.github.io/starfield-item-ids/">&nbsp;&nbsp;Item IDs</a></li>
-  <li><a href="https://taosecurity.github.io/starfield-locations/">&nbsp;&nbsp;Locations</a></li>
-  <li><a href="https://taosecurity.github.io/starfield-game-settings/">&nbsp;&nbsp;Game Settings</a></li>
-  <li><a href="https://taosecurity.github.io/starfield-globals-quests/">&nbsp;&nbsp;Globals and Quests</a></li>
-  <li><a href="https://taosecurity.github.io/starfield-record-types/">&nbsp;&nbsp;Record Types</a></li>
-  <li><a href="https://taosecurity.github.io/starfield-version-history/">&nbsp;&nbsp;Version History</a></li>
+  <li><a href="#console-commands">&nbsp;&nbsp;Console Commands</a></li>
+  <li><a href="#item-ids">&nbsp;&nbsp;Item IDs</a></li>
+  <li><a href="#locations">&nbsp;&nbsp;Locations</a></li>
+  <li><a href="#game-settings">&nbsp;&nbsp;Game Settings</a></li>
+  <li><a href="#globals-and-quests">&nbsp;&nbsp;Globals and Quests</a></li>
+  <li><a href="#record-types">&nbsp;&nbsp;Record Types</a></li>
+  <li><a href="#version-history">&nbsp;&nbsp;Version History</a></li>
   <li class="gap"><a href="#guides">Worked examples <span>1</span></a></li>
-  <li><a href="https://taosecurity.github.io/starfield-scene-hunt/">&nbsp;&nbsp;Scene Hunt: The Kneeling Mourner</a></li>
+  <li><a href="#scene-hunt-the-kneeling-mourner">&nbsp;&nbsp;Scene Hunt: The Kneeling Mourner</a></li>
   <li class="gap"><a href="#tools">Modding tools <span>5</span></a></li>
-  <li><a href="https://github.com/taosecurity/sfmodcheck">&nbsp;&nbsp;sfmodcheck</a></li>
-  <li><a href="https://github.com/taosecurity/papyrus-log-check">&nbsp;&nbsp;papyrus-log-check</a></li>
-  <li><a href="https://github.com/taosecurity/BuildKit">&nbsp;&nbsp;BuildKit</a></li>
-  <li><a href="https://github.com/taosecurity/sfcutcheck">&nbsp;&nbsp;sfcutcheck</a></li>
-  <li><a href="https://github.com/taosecurity/StarfieldVoiceTool">&nbsp;&nbsp;Voice Tool</a></li>
+  <li><a href="#sfmodcheck">&nbsp;&nbsp;sfmodcheck</a></li>
+  <li><a href="#papyrus-log-check">&nbsp;&nbsp;papyrus-log-check</a></li>
+  <li><a href="#buildkit">&nbsp;&nbsp;BuildKit</a></li>
+  <li><a href="#sfcutcheck">&nbsp;&nbsp;sfcutcheck</a></li>
+  <li><a href="#voice-tool">&nbsp;&nbsp;Voice Tool</a></li>
   <li class="gap"><a href="#general">General purpose tools <span>2</span></a></li>
-  <li><a href="https://github.com/taosecurity/SquareSnap">&nbsp;&nbsp;SquareSnap</a></li>
-  <li><a href="https://github.com/taosecurity/BejView">&nbsp;&nbsp;BejView</a></li>
+  <li><a href="#squaresnap">&nbsp;&nbsp;SquareSnap</a></li>
+  <li><a href="#bejview">&nbsp;&nbsp;BejView</a></li>
   <li class="gap"><a href="#about">About</a></li>
 </ul></nav>
 <main>
 <header id="top">
-  <p class="eyebrow">10 sites &middot; 7 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-15 23:48 UTC</p>
+  <p class="eyebrow">10 sites &middot; 7 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-15 23:54 UTC</p>
   <h1>Richard Presents Development Hub</h1>
   <p class="lede">These are free tools and references for Starfield players and modders: console commands, item and place IDs, game settings, globals and quests,
   the record types behind every plugin, every game version, how Starfield modding is doing on Nexus Mods and how much it is played on Xbox. A worked example shows how to trace
@@ -126,7 +128,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <h2>Trends</h2>
   <p class="lede">These pages show how Starfield is doing compared with other games: its modding scene on Nexus Mods, and how much people play it on Xbox.</p>
   <div class="cards">
-    <article class="card" style="--h: 222">
+    <article class="card" id="tracking-on-nexus-mods" style="--h: 222">
       <h3><a href="https://taosecurity.github.io/NexusModsMetrics/">Tracking Starfield on Nexus Mods</a></h3>
       <p>It tracks daily mod downloads, mod counts, mod types and hot topics for the top 15 games on Nexus Mods, with forecasts.</p>
       <p class="use">See how Starfield modding compares with other games over time.</p>
@@ -134,7 +136,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">rebuilt automatically every day</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
-    <article class="card" style="--h: 150">
+    <article class="card" id="xbox-top-40-tracker" style="--h: 150">
       <h3><a href="https://taosecurity.github.io/xbox-top40-tracker/">Xbox Top 40 Tracker</a></h3>
       <p>It charts where Starfield and ten other big RPG and open-world games place each week in the TrueAchievements Xbox top 40 since September 2023, with a score for each game.</p>
       <p class="use">See how much people play Starfield on Xbox compared with similar games.</p>
@@ -148,7 +150,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <h2>Console and reference lists</h2>
   <p class="lede">These searchable lists are read straight from the game files, for players using the console and for modders.</p>
   <div class="cards">
-    <article class="card" style="--h: 35">
+    <article class="card" id="console-commands" style="--h: 35">
       <h3><a href="https://taosecurity.github.io/starfield-console-commands/">Starfield Console Commands</a></h3>
       <p>It lists every console and script command, with what it does, its parameters and examples you can copy.</p>
       <p class="use">Look up a command and how to type it.</p>
@@ -156,7 +158,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">Starfield 1.16.244.0 &middot; built 2026-11-11</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
-    <article class="card" style="--h: 280">
+    <article class="card" id="item-ids" style="--h: 280">
       <h3><a href="https://taosecurity.github.io/starfield-item-ids/">Starfield Item IDs</a></h3>
       <p>It gives the FormIDs of every spawnable item in the base game and the add-ons, with copyable player.additem commands.</p>
       <p class="use">Give yourself a weapon, suit, resource or aid item.</p>
@@ -164,7 +166,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">Starfield 1.16.244.0 &middot; built 2026-11-09</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
-    <article class="card" style="--h: 190">
+    <article class="card" id="locations" style="--h: 190">
       <h3><a href="https://taosecurity.github.io/starfield-locations/">Starfield Locations</a></h3>
       <p>It lists every place you can reach with the coc command, with readable names, planets and systems.</p>
       <p class="use">Jump straight to a city, ship interior or point of interest.</p>
@@ -172,7 +174,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">Starfield 1.16.244.0 &middot; built 2026-11-09</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
-    <article class="card" style="--h: 330">
+    <article class="card" id="game-settings" style="--h: 330">
       <h3><a href="https://taosecurity.github.io/starfield-game-settings/">Starfield Game Settings</a></h3>
       <p>It lists every game setting and INI setting with its built-in default value, and the ones Starfield.esm changes.</p>
       <p class="use">Find a setting to read or change with getgs / setgs or getini / setini.</p>
@@ -180,7 +182,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">Starfield 1.16.244.0 &middot; built 2026-11-09</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
-    <article class="card" style="--h: 100">
+    <article class="card" id="globals-and-quests" style="--h: 100">
       <h3><a href="https://taosecurity.github.io/starfield-globals-quests/">Starfield Globals and Quests</a></h3>
       <p>It lists every global variable and quest, with starting values, the quests that use each global, every quest stage with the developers&#x27; note, and copyable commands.</p>
       <p class="use">Get a stuck quest moving, or see what a global like a companion timer does.</p>
@@ -188,7 +190,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">Starfield 1.16.244.0 &middot; built 2026-11-09</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
-    <article class="card" style="--h: 222">
+    <article class="card" id="record-types" style="--h: 222">
       <h3><a href="https://taosecurity.github.io/starfield-record-types/">Starfield Record Types</a></h3>
       <p>It is a plain-English guide to every record type in Starfield.esm (GMST, KYWD, NPC_, CELL, QUST and the rest), with counts and real editor IDs.</p>
       <p class="use">Understand what xEdit, Spriggit and conflict reports are talking about.</p>
@@ -196,7 +198,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">Starfield 1.16.244.0 &middot; built 2026-11-09</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
-    <article class="card" style="--h: 150">
+    <article class="card" id="version-history" style="--h: 150">
       <h3><a href="https://taosecurity.github.io/starfield-version-history/">Starfield Version History</a></h3>
       <p>It lists every Starfield version since the 2023 review build, with its date, kind of update, highlights and links to the patch notes.</p>
       <p class="use">Find when an update came out and what it changed.</p>
@@ -210,7 +212,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <h2>Worked examples</h2>
   <p class="lede">These pages show, step by step, how a question about the game was answered from its files, so you can do the same.</p>
   <div class="cards">
-    <article class="card" style="--h: 35">
+    <article class="card" id="scene-hunt-the-kneeling-mourner" style="--h: 35">
       <h3><a href="https://taosecurity.github.io/starfield-scene-hunt/">Scene Hunt: The Kneeling Mourner</a></h3>
       <p>It traces a grave scene a player saw in Starfield to the mod records that place it, one step at a time, with a small read-only script you can reuse.</p>
       <p class="use">Learn how to find out which plugin adds something you see in the game.</p>
@@ -224,7 +226,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <h2>Modding tools</h2>
   <p class="lede">These free, open-source programs help mod authors check, build and explore Starfield mods. The checkers and the Voice Tool only read your files, and none of the tools makes network connections.</p>
   <div class="cards">
-    <article class="card" style="--h: 280">
+    <article class="card" id="sfmodcheck" style="--h: 280">
       <h3><a href="https://github.com/taosecurity/sfmodcheck">sfmodcheck</a></h3>
       <p>It checks a Starfield plugin (.esm) for problems that break it in the game: broken links, FormIDs out of range, bad headers, scenes, conditions, deleted and identical-to-master records. After each kind of problem it says how to fix it in xEdit or the Creation Kit.</p>
       <p class="use">Drop your plugin on sfmodcheck.exe before you play or release a mod.</p>
@@ -232,7 +234,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.4.0 &middot; released 2026-11-09 &middot; <a href="https://github.com/taosecurity/sfmodcheck/releases/tag/v0.4.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" style="--h: 190">
+    <article class="card" id="papyrus-log-check" style="--h: 190">
       <h3><a href="https://github.com/taosecurity/papyrus-log-check">papyrus-log-check</a></h3>
       <p>It reads a Starfield Papyrus log and checks it against a rule file for your mod, so each expected log line is reported as PASS, FAIL or NOT SEEN.</p>
       <p class="use">Check after a test session that your mod&#x27;s scripts did what they should.</p>
@@ -240,7 +242,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.2.1 &middot; released 2026-11-09 &middot; <a href="https://github.com/taosecurity/papyrus-log-check/releases/tag/v0.2.1" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" style="--h: 330">
+    <article class="card" id="buildkit" style="--h: 330">
       <h3><a href="https://github.com/taosecurity/BuildKit">BuildKit</a></h3>
       <p>It is a C# library for writing Starfield plugins with Mutagen 0.54.4: it finds the masters, writes plugins the way the Creation Kit does (overridden-forms list, effect data, one thread) and keeps FormIDs stable between builds.</p>
       <p class="use">Build your mod&#x27;s plugin from code instead of by hand.</p>
@@ -248,7 +250,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.2.0 &middot; released 2026-11-09 &middot; <a href="https://github.com/taosecurity/BuildKit/releases/tag/v0.2.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" style="--h: 100">
+    <article class="card" id="sfcutcheck" style="--h: 100">
       <h3><a href="https://github.com/taosecurity/sfcutcheck">sfcutcheck</a></h3>
       <p>It finds what Starfield never uses: cut weapons, quests nothing starts, dialogue nobody says and items in lists nothing hands out. For each one it shows the chain of records behind the answer. Mod authors can also point it at their own plugin to find records the mod adds but never uses.</p>
       <p class="use">Run a scan to see the cut content, or check your own plugin for leftovers.</p>
@@ -256,7 +258,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.1.6 &middot; released 2026-11-11 &middot; <a href="https://github.com/taosecurity/sfcutcheck/releases/tag/v0.1.6" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" style="--h: 222">
+    <article class="card" id="voice-tool" style="--h: 222">
       <h3><a href="https://github.com/taosecurity/StarfieldVoiceTool">Starfield Voice Tool</a></h3>
       <p>It lets you browse every voiced line in Starfield and your installed mods by plugin and voice type, search the dialogue text, listen to any line and save it as a .wav. A Sound Effects tab does the same for about 35,000 game and mod sounds. It is a fork of yak3d&#x27;s tool with bug fixes and the sound browser.</p>
       <p class="use">Find a companion&#x27;s lines, check what a mod&#x27;s voice files say, or get audio clips for a mod or video.</p>
@@ -270,7 +272,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <h2>General purpose tools</h2>
   <p class="lede">These free, open-source programs aren&#x27;t only for Starfield: they help with everyday work on any Windows PC, and BejView runs on Linux too.</p>
   <div class="cards">
-    <article class="card" style="--h: 150">
+    <article class="card" id="squaresnap" style="--h: 150">
       <h3><a href="https://github.com/taosecurity/SquareSnap">SquareSnap</a></h3>
       <p>It takes square screenshots on Windows: you drag over part of the screen, it keeps the selection square, shows a preview and saves it as a PNG.</p>
       <p class="use">Grab square pictures of the screen for thumbnails, posts and notes.</p>
@@ -278,7 +280,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 1.0.0 &middot; released 2025-03-25 &middot; <a href="https://github.com/taosecurity/SquareSnap/releases/tag/1.0.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" style="--h: 35">
+    <article class="card" id="bejview" style="--h: 35">
       <h3><a href="https://github.com/taosecurity/BejView">BejView</a></h3>
       <p>It opens and searches text files of many gigabytes, such as logs and dumps, in seconds, and can follow a log while a program is still writing it. It never changes the file.</p>
       <p class="use">Open a huge log or data file that ordinary editors can&#x27;t handle.</p>
