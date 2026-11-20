@@ -117,7 +117,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 </ul></nav>
 <main>
 <header id="top">
-  <p class="eyebrow">10 sites &middot; 16 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-20 20:48 UTC</p>
+  <p class="eyebrow">10 sites &middot; 16 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-20 22:13 UTC</p>
   <h1>Richard Presents Development Hub</h1>
   <p class="lede">These are free tools and references for Starfield players and modders: console commands, item and place IDs, game settings, globals and quests,
   the record types behind every plugin, every game version, how Starfield modding is doing on Nexus Mods and how much it is played on Xbox. A worked example shows how to trace
@@ -129,8 +129,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <h2>What's new <small>2026-11-20</small></h2>
   <p class="lede">These are the changes since the last update on 2026-11-20.</p>
   <ul>
-    <li><a href="https://github.com/taosecurity"><strong>Friendlier guides for every tool and site</strong></a>: Every tool&#x27;s and site&#x27;s GitHub page now opens with a real example of what it does, explains the modding words it uses, and shows how to open a command prompt or install Python, and every latest release page is split into short sections.</li>
-    <li><a href="#tools"><strong>New tool releases</strong></a>: New versions of sf-mod-check (0.9.0) are out, and each card links to the new download.</li>
+    <li><a href="#tools"><strong>New tool releases</strong></a>: Three small fix releases are out. papyrus-log-check 0.3.2 prints its full version text however --version is given, sf-mod-build 0.1.1 points at the renamed sf-mod-check, and sf-save-reader 0.1.3 names its real version when it refuses an old save. Each card links to the new download.</li>
   </ul>
 </section>
 <section id="trends">
@@ -248,7 +247,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p>It reads a Starfield Papyrus log and checks it against a rule file for your mod, so each expected log line is reported as PASS, FAIL or NOT SEEN.</p>
       <p class="use">Check after a test session that your mod&#x27;s scripts did what they should.</p>
       <div class="chips"><span class="chip">Python 3.9+</span><span class="chip">no extra packages</span></div>
-      <p class="meta">version 0.3.1 &middot; released 2026-11-16 &middot; <a href="https://github.com/taosecurity/papyrus-log-check/releases/tag/v0.3.1" style="position: relative; z-index: 1">download</a></p>
+      <p class="meta">version 0.3.2 &middot; released 2026-11-20 &middot; <a href="https://github.com/taosecurity/papyrus-log-check/releases/tag/v0.3.2" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
     <article class="card" id="buildkit" style="--h: 330">
@@ -288,7 +287,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p>It builds a Starfield mod from one project file, sfmod.json, with one command. It compiles the mod&#x27;s Papyrus scripts with your Creation Kit&#x27;s compiler (never with -release, so the logging stays), runs the mod&#x27;s Mutagen builder to write the plugin, packs the scripts into a BA2 with Archive2, writes a zip that gives the same bytes every time and runs the sf-mod-check release check on it. A dotnet new template makes a starter mod that builds as is.</p>
       <p class="use">Make a starter mod with dotnet new sfmod, then run sf-mod-build build in its folder.</p>
       <div class="chips"><span class="chip">Windows</span><span class="chip">.NET 9</span><span class="chip">GPL-3.0</span></div>
-      <p class="meta">version 0.1.0 &middot; released 2026-11-19 &middot; <a href="https://github.com/taosecurity/sf-mod-build/releases/tag/v0.1.0" style="position: relative; z-index: 1">download</a></p>
+      <p class="meta">version 0.1.1 &middot; released 2026-11-20 &middot; <a href="https://github.com/taosecurity/sf-mod-build/releases/tag/v0.1.1" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
     <article class="card" id="sf-load-order" style="--h: 280">
@@ -304,7 +303,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p>It reads a Starfield save (.sfs) and shows what is in it: the character, the game version, every plugin the save depends on, and the state of every quest (running or stopped, current stage, stages done and objectives). Point it at your Data folder and it names the quests from the game&#x27;s plugins and your mods. It can also list a mod&#x27;s change records, compare two saves and hide the player name for bug reports.</p>
       <p class="use">Run sf-save-reader quests on a save with --data to see where each quest stands, or dump to see the plugins the save needs.</p>
       <div class="chips"><span class="chip">Windows</span><span class="chip">.NET 9</span><span class="chip">reads only</span><span class="chip">MIT</span></div>
-      <p class="meta">version 0.1.2 &middot; released 2026-11-20 &middot; <a href="https://github.com/taosecurity/sf-save-reader/releases/tag/v0.1.2" style="position: relative; z-index: 1">download</a></p>
+      <p class="meta">version 0.1.3 &middot; released 2026-11-20 &middot; <a href="https://github.com/taosecurity/sf-save-reader/releases/tag/v0.1.3" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
     <article class="card" id="sf-save-health" style="--h: 330">
