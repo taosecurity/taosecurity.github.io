@@ -93,9 +93,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <li><a href="#globals-and-quests">&nbsp;&nbsp;Globals and Quests</a></li>
   <li><a href="#record-types">&nbsp;&nbsp;Record Types</a></li>
   <li><a href="#version-history">&nbsp;&nbsp;Version History</a></li>
-  <li class="gap"><a href="#guides">Worked examples <span>2</span></a></li>
+  <li class="gap"><a href="#guides">Worked examples <span>3</span></a></li>
   <li><a href="#scene-hunt-the-kneeling-mourner">&nbsp;&nbsp;Scene Hunt: The Kneeling Mourner</a></li>
   <li><a href="#load-order-facts-plugins-txt-and-creations">&nbsp;&nbsp;Load Order Facts: Plugins.txt and Creations</a></li>
+  <li><a href="#using-richard-s-public-modding-tools">&nbsp;&nbsp;Using Richard&#x27;s Public Modding Tools</a></li>
   <li class="gap"><a href="#tools">Modding tools <span>15</span></a></li>
   <li><a href="#sf-mod-check">&nbsp;&nbsp;sf-mod-check</a></li>
   <li><a href="#papyrus-log-check">&nbsp;&nbsp;papyrus-log-check</a></li>
@@ -119,20 +120,20 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 </ul></nav>
 <main>
 <header id="top">
-  <p class="eyebrow">11 sites &middot; 17 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-24 23:10 UTC</p>
+  <p class="eyebrow">12 sites &middot; 17 tools &middot; Starfield 1.16.244.0 &middot; built 2026-11-25 03:31 UTC</p>
   <h1>Richard Presents Development Hub</h1>
   <p class="lede">These are free tools and references for Starfield players and modders: console commands, item and place IDs, game settings, globals and quests,
-  the record types behind every plugin, every game version, how Starfield modding is doing on Nexus Mods and how much it is played on Xbox. Two worked examples show how the game works, such as how to trace
+  the record types behind every plugin, every game version, how Starfield modding is doing on Nexus Mods and how much it is played on Xbox. Three worked examples show how the game works, such as how to trace
   something you see in the game to the plugin that adds it. The lists are read from the game's own files and kept up to date after game updates.
   The modding tools check plugins and Papyrus logs and help build plugins from code, the Voice Tool plays and saves the game's voiced lines and sounds, and two general purpose tools take square screenshots and open huge text files.</p>
   <p class="byline">By <a href="https://github.com/taosecurity" target="_blank" rel="noopener">Richard Bejtlich</a> &middot; <a href="https://www.youtube.com/@RichardBejtlich" target="_blank" rel="noopener">Richard Presents Starfield Essentials</a> on YouTube</p>
 </header>
 <section id="whats-new" class="news">
   <h2>What's new <small>2026-11-24</small></h2>
-  <p class="lede">These are the changes since the last update on 2026-11-23.</p>
+  <p class="lede">These are the changes since the last update on 2026-11-24.</p>
   <ul>
-    <li><a href="#tools"><strong>New tool releases</strong></a>: New versions of sf-mod-check (0.16.1), sf-log-collector (2.1.0), sf-mod-build (0.4.2), sf-load-order (0.2.3) and sf-papyrus-ref (0.2.4) are out, and each card links to the new download.</li>
-    <li><a href="https://taosecurity.github.io/starfield-load-order-facts/"><strong>Load Order Facts: Mod Organizer 2</strong></a>: The Load Order Facts page now explains how Mod Organizer 2 handles Plugins.txt (it keeps its own copy in the profile and never deploys), in both 2.5.2 and the 2.5.3 betas, and its snapshot script reads ContentCatalog.txt from the right folder.</li>
+    <li><a href="https://taosecurity.github.io/starfield-pmt-guide/"><strong>New guide: Using Richard&#x27;s Public Modding Tools</strong></a>: A new guide shows players and mod authors how to do each common task with the public modding tools, once by hand and once with an AI agent, with two small tutorial mods whose source you can build yourself.</li>
+    <li><a href="#tools"><strong>New tool releases</strong></a>: New versions of sf-mod-check (0.16.2) and sf-patch-day (0.3.0) are out, and each card links to the new download.</li>
   </ul>
 </section>
 <section id="trends">
@@ -239,21 +240,29 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">checked 2026-11-21 on 1.16.244</p>
       <span class="go" aria-hidden="true">Open &rarr;</span>
     </article>
+    <article class="card" id="using-richard-s-public-modding-tools" style="--h: 190">
+      <h3><a href="https://taosecurity.github.io/starfield-pmt-guide/">Using Richard&#x27;s Public Modding Tools</a></h3>
+      <p>It shows players and mod authors how to check a load order, evaluate a mod, patch conflicts, and fix, extend, build, test and release mods with the public modding tools, by hand or with an AI agent.</p>
+      <p class="use">Learn the public modding tools task by task, with every command checked on real files.</p>
+      <div class="chips"><span class="chip">33 pages</span><span class="chip">2 tutorial mods</span></div>
+      <p class="meta">checked 2026-11-24</p>
+      <span class="go" aria-hidden="true">Open &rarr;</span>
+    </article>
   </div>
 </section>
 <section id="tools">
   <h2>Modding tools</h2>
   <p class="lede">These free, open-source programs help mod authors check, build and explore Starfield mods. The checkers and the Voice Tool only read your files, and none of the tools makes network connections.</p>
   <div class="cards">
-    <article class="card" id="sf-mod-check" style="--h: 190">
+    <article class="card" id="sf-mod-check" style="--h: 330">
       <h3><a href="https://github.com/taosecurity/sf-mod-check">sf-mod-check</a></h3>
       <p>It checks a Starfield plugin (.esm) for problems that break it in the game: broken links, FormIDs out of range, bad headers, scenes, conditions, deleted and identical-to-master records. After each kind of problem it says how to fix it in xEdit or the Creation Kit. Its release command checks a finished mod zip before you upload it (with a profile for Bethesda Creations since 0.10.0), and its triage command looks over a mod you downloaded, offline, and lists what is worth a look. Since 0.11.0 its diff command compares two versions of a plugin or mod and says what really changed, apart from resave noise. It was called sfmodcheck until 0.8.0.</p>
       <p class="use">Drop your plugin on sf-mod-check.exe before you play, run sf-mod-check release on your zip before you upload it, and run sf-mod-check triage on a mod you downloaded before you install it. When a mod updates, run sf-mod-check diff on the old and new zips.</p>
       <div class="chips"><span class="chip">Windows exe</span><span class="chip">dotnet tool</span><span class="chip">15 checks</span><span class="chip">release command</span><span class="chip">triage command</span><span class="chip">diff command</span></div>
-      <p class="meta">version 0.16.1 &middot; released 2026-11-24 &middot; <a href="https://github.com/taosecurity/sf-mod-check/releases/tag/v0.16.1" style="position: relative; z-index: 1">download</a></p>
+      <p class="meta">version 0.16.2 &middot; released 2026-11-24 &middot; <a href="https://github.com/taosecurity/sf-mod-check/releases/tag/v0.16.2" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="papyrus-log-check" style="--h: 330">
+    <article class="card" id="papyrus-log-check" style="--h: 100">
       <h3><a href="https://github.com/taosecurity/papyrus-log-check">papyrus-log-check</a></h3>
       <p>It reads a Starfield Papyrus log and checks it against a rule file for your mod, so each expected log line is reported as PASS, FAIL or NOT SEEN. Since 0.4.0 a starter rule pack explains the game&#x27;s own Papyrus error and warning lines in plain words.</p>
       <p class="use">Check after a test session that your mod&#x27;s scripts did what they should.</p>
@@ -261,7 +270,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.4.2 &middot; released 2026-11-22 &middot; <a href="https://github.com/taosecurity/papyrus-log-check/releases/tag/v0.4.2" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="buildkit" style="--h: 100">
+    <article class="card" id="buildkit" style="--h: 222">
       <h3><a href="https://github.com/taosecurity/BuildKit">BuildKit</a></h3>
       <p>It is a C# library for writing Starfield plugins with Mutagen 0.54.4: it finds the masters, writes plugins the way the Creation Kit does (overridden-forms list, effect data, one thread) and keeps FormIDs stable between builds.</p>
       <p class="use">Build your mod&#x27;s plugin from code instead of by hand.</p>
@@ -269,7 +278,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.5.0 &middot; released 2026-11-23 &middot; <a href="https://github.com/taosecurity/BuildKit/releases/tag/v0.5.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-cut-check" style="--h: 222">
+    <article class="card" id="sf-cut-check" style="--h: 150">
       <h3><a href="https://github.com/taosecurity/sf-cut-check">sf-cut-check</a></h3>
       <p>It finds what Starfield never uses: cut weapons, quests nothing starts, dialogue nobody says and items in lists nothing hands out. For each one it shows the chain of records behind the answer. Mod authors can also point it at their own plugin to find records the mod adds but never uses.</p>
       <p class="use">Run a scan to see the cut content, or check your own plugin for leftovers.</p>
@@ -277,7 +286,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.2.0 &middot; released 2026-11-21 &middot; <a href="https://github.com/taosecurity/sf-cut-check/releases/tag/v0.2.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-pex-tools" style="--h: 150">
+    <article class="card" id="sf-pex-tools" style="--h: 35">
       <h3><a href="https://github.com/taosecurity/sf-pex-tools">sf-pex-tools</a></h3>
       <p>It tells you whether two compiled Papyrus scripts do the same thing even when their bytes differ, which is always true after a rebuild, and it lists, extracts and compares the files inside .ba2 archives. It can compare the scripts in two archives in one command.</p>
       <p class="use">Check that a rebuild of your mod changed only what you meant to, or pull one file out of an archive.</p>
@@ -285,7 +294,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.1.0 &middot; released 2026-11-18 &middot; <a href="https://github.com/taosecurity/sf-pex-tools/releases/tag/v0.1.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="starfield-agent" style="--h: 35">
+    <article class="card" id="starfield-agent" style="--h: 280">
       <h3><a href="https://github.com/taosecurity/starfield-agent">starfield-agent</a></h3>
       <p>It is a Claude Code plugin that gives an AI coding assistant twelve Starfield modding skills, such as starting, building, rebuilding and evaluating a mod, reading test logs and checking a release. Its guard hooks stop the assistant from writing into your game&#x27;s Data and saves folders or committing game code, and it adds a Papyrus lookup server.</p>
       <p class="use">Add it to Claude Code with two commands, then ask the assistant to set up, build or check your mod.</p>
@@ -293,7 +302,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.2.1 &middot; released 2026-11-23 &middot; <a href="https://github.com/taosecurity/starfield-agent/releases/tag/v0.2.1" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-log-collector" style="--h: 280">
+    <article class="card" id="sf-log-collector" style="--h: 190">
       <h3><a href="https://github.com/taosecurity/sf-log-collector">sf-log-collector</a></h3>
       <p>It gathers the logs a mod author asks for after a bug into one zip with a double-click: Papyrus, SFSE and crash logs, your INIs, plugins.txt, mod settings, new screenshots and Windows crash events, plus saves if you ask. Each run picks up only what changed since the last one. It works with Steam, Game Pass, Vortex and Mod Organizer 2.</p>
       <p class="use">Quit the game after the bug, double-click the collector and attach the zip to your bug report.</p>
@@ -301,7 +310,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 2.1.0 &middot; released 2026-11-24 &middot; <a href="https://github.com/taosecurity/sf-log-collector/releases/tag/v2.1.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-mod-build" style="--h: 190">
+    <article class="card" id="sf-mod-build" style="--h: 330">
       <h3><a href="https://github.com/taosecurity/sf-mod-build">sf-mod-build</a></h3>
       <p>It builds a Starfield mod from one project file, sfmod.json, with one command. It compiles the mod&#x27;s Papyrus scripts with your Creation Kit&#x27;s compiler (never with -release, so the logging stays), runs the mod&#x27;s Mutagen builder to write the plugin, packs the scripts and the mod&#x27;s own art into BA2 archives with Archive2 (with Xbox archives for Creations), writes a zip that gives the same bytes every time and runs the sf-mod-check release check on it. A dotnet new template makes a starter mod that builds as is.</p>
       <p class="use">Make a starter mod with dotnet new sfmod, then run sf-mod-build build in its folder.</p>
@@ -309,7 +318,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.4.2 &middot; released 2026-11-24 &middot; <a href="https://github.com/taosecurity/sf-mod-build/releases/tag/v0.4.2" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-load-order" style="--h: 330">
+    <article class="card" id="sf-load-order" style="--h: 100">
       <h3><a href="https://github.com/taosecurity/sf-load-order">sf-load-order</a></h3>
       <p>It checks your Starfield load order before you play. It reads the game&#x27;s Plugins.txt, a Mod Organizer 2 profile or a file exported from Vortex&#x27;s Load Order page, and reports masters in the wrong order, missing files, patches built for an older version of a mod, known clashes from your LOOT masterlist, and archive and loose-file overlap. With sf-mod-check installed it also finds record conflicts. Then it suggests a better order and writes plugins.txt, MO2&#x27;s loadorder.txt and a file for Vortex&#x27;s Import button.</p>
       <p class="use">Unzip the release and run sf-load-order.cmd in that folder, then open the report.html it writes.</p>
@@ -317,7 +326,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.2.3 &middot; released 2026-11-24 &middot; <a href="https://github.com/taosecurity/sf-load-order/releases/tag/v0.2.3" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-save-reader" style="--h: 100">
+    <article class="card" id="sf-save-reader" style="--h: 222">
       <h3><a href="https://github.com/taosecurity/sf-save-reader">sf-save-reader</a></h3>
       <p>It reads a Starfield save (.sfs) and shows what is in it: the character, the game version, every plugin the save depends on, and the state of every quest (running or stopped, current stage, stages done and objectives). Point it at your Data folder and it names the quests from the game&#x27;s plugins and your mods. It can also list a mod&#x27;s change records, compare two saves and hide the player name for bug reports.</p>
       <p class="use">Run sf-save-reader quests on a save with --data to see where each quest stands, or dump to see the plugins the save needs.</p>
@@ -325,7 +334,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.1.3 &middot; released 2026-11-20 &middot; <a href="https://github.com/taosecurity/sf-save-reader/releases/tag/v0.1.3" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-save-health" style="--h: 222">
+    <article class="card" id="sf-save-health" style="--h: 150">
       <h3><a href="https://github.com/taosecurity/sf-save-health">sf-save-health</a></h3>
       <p>It checks a Starfield save against the mods you have installed now and tells you what looks broken: plugins the save needs that are gone, data removed mods left behind, forms a mod update removed, quests whose stages or objectives no longer exist, and save bloat. With solo it compares a save from before a test with one from after it and reports only what changed. It only reads saves and can hide your character name for sharing.</p>
       <p class="use">Run sf-save-health check on a save before you load it after changing your mod list.</p>
@@ -333,7 +342,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.7.4 &middot; released 2026-11-23 &middot; <a href="https://github.com/taosecurity/sf-save-health/releases/tag/v0.7.4" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-test-plan" style="--h: 150">
+    <article class="card" id="sf-test-plan" style="--h: 35">
       <h3><a href="https://github.com/taosecurity/sf-test-plan">sf-test-plan</a></h3>
       <p>It turns a Markdown test plan for your mod into one offline checklist page. Testers mark each step Pass, Fail or Skip with a note while they play, and the page keeps the marks in the browser and exports them as JSON. It can add those results to a file next to the plan and turn a papyrus-log-check report into marks for the steps the log proves, and since 0.3.0 its rules command starts that rule file from the plan.</p>
       <p class="use">Write a plan with sf-test-plan new, build the page with sf-test-plan build, and open it in your browser while you test.</p>
@@ -341,7 +350,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.4.0 &middot; released 2026-11-23 &middot; <a href="https://github.com/taosecurity/sf-test-plan/releases/tag/v0.4.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-papyrus-ref" style="--h: 35">
+    <article class="card" id="sf-papyrus-ref" style="--h: 280">
       <h3><a href="https://github.com/taosecurity/sf-papyrus-ref">sf-papyrus-ref</a></h3>
       <p>It tells you offline whether a Papyrus function or event exists in Starfield, which script it is on and which official flags it carries, such as Latent and DebugOnly. It checks your .psc or .pex scripts for calls that do nothing on Xbox and PlayStation or should never ship, and it can run as an MCP server so that AI agents look names up instead of inventing them.</p>
       <p class="use">Look a function up with sf-papyrus-ref lookup Debug.Notification, or check a mod&#x27;s scripts before you publish it.</p>
@@ -349,15 +358,15 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 0.2.4 &middot; released 2026-11-24 &middot; <a href="https://github.com/taosecurity/sf-papyrus-ref/releases/tag/v0.2.4" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="sf-patch-day" style="--h: 280">
+    <article class="card" id="sf-patch-day" style="--h: 190">
       <h3><a href="https://github.com/taosecurity/sf-patch-day">sf-patch-day</a></h3>
       <p>After a Starfield update it tells you which of your SFSE plugins still load, for the plugins you have installed or a download you&#x27;re about to install, and whether SFSE and the Address Library are ready for the new game version. For mod authors, its drift command checks whether the update changed the records, quest stages and script functions your mod relies on, so you know whether to rebuild. Since 0.2.0 it finds those functions and quest stages by reading your mod&#x27;s compiled scripts.</p>
       <p class="use">Run sf-patch-day dlls after a game update, before you launch the game.</p>
       <div class="chips"><span class="chip">Windows</span><span class="chip">Linux</span><span class="chip">Python 3.9+</span><span class="chip">reads only</span><span class="chip">MIT</span></div>
-      <p class="meta">version 0.2.2 &middot; released 2026-11-23 &middot; <a href="https://github.com/taosecurity/sf-patch-day/releases/tag/v0.2.2" style="position: relative; z-index: 1">download</a></p>
+      <p class="meta">version 0.3.0 &middot; released 2026-11-24 &middot; <a href="https://github.com/taosecurity/sf-patch-day/releases/tag/v0.3.0" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="voice-tool" style="--h: 190">
+    <article class="card" id="voice-tool" style="--h: 330">
       <h3><a href="https://github.com/taosecurity/StarfieldVoiceTool">Starfield Voice Tool</a></h3>
       <p>It lets you browse every voiced line in Starfield and your installed mods by plugin and voice type, search the dialogue text, listen to any line and save it as a .wav. A Sound Effects tab does the same for about 35,000 game and mod sounds. Since 0.10.0 it can export everything a tab shows in one go, keeping the game&#x27;s folders, and the starfieldvt-export command does the same from a script. It is a fork of yak3d&#x27;s tool with bug fixes and the sound browser.</p>
       <p class="use">Find a companion&#x27;s lines, check what a mod&#x27;s voice files say, or get audio clips for a mod or video.</p>
@@ -371,7 +380,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <h2>General purpose tools</h2>
   <p class="lede">These free, open-source programs aren&#x27;t only for Starfield: they help with everyday work on any Windows PC, and both run on Linux too.</p>
   <div class="cards">
-    <article class="card" id="squaresnap" style="--h: 330">
+    <article class="card" id="squaresnap" style="--h: 100">
       <h3><a href="https://github.com/taosecurity/SquareSnap">SquareSnap</a></h3>
       <p>It takes square screenshots on Windows, in WSL and on Linux: you drag over part of the screen, it keeps the selection square, shows a preview and saves it as a PNG.</p>
       <p class="use">Grab square pictures of the screen for thumbnails, posts and notes.</p>
@@ -379,7 +388,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p class="meta">version 2.0.2 &middot; released 2026-11-16 &middot; <a href="https://github.com/taosecurity/SquareSnap/releases/tag/v2.0.2" style="position: relative; z-index: 1">download</a></p>
       <span class="go" aria-hidden="true">Open on GitHub &rarr;</span>
     </article>
-    <article class="card" id="bejview" style="--h: 100">
+    <article class="card" id="bejview" style="--h: 222">
       <h3><a href="https://github.com/taosecurity/BejView">BejView</a></h3>
       <p>It opens and searches text files of many gigabytes, such as logs and dumps, in seconds, and can follow a log while a program is still writing it. It never changes the file.</p>
       <p class="use">Open a huge log or data file that ordinary editors can&#x27;t handle.</p>
@@ -396,7 +405,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <li>The lists are read from the Steam copy of the game and rebuilt after game updates; each card shows the game version it was built from.</li>
     <li>The tools are open source (GPL-3.0 or MIT). Each tool's card shows its latest version and links to its download page; the newer releases list a SHA-256 checksum for every file. Each tool's README on GitHub says how to install and use it.</li>
     <li>These are unofficial pages, not made or endorsed by Bethesda. Starfield is a trademark of ZeniMax Media.</li>
-    <li>If you find a mistake or have an idea, open an issue on GitHub for that site: <a href="https://github.com/taosecurity/starfield-console-commands/issues/new" target="_blank" rel="noopener">Console Commands</a>, <a href="https://github.com/taosecurity/starfield-item-ids/issues/new" target="_blank" rel="noopener">Item IDs</a>, <a href="https://github.com/taosecurity/starfield-locations/issues/new" target="_blank" rel="noopener">Locations</a>, <a href="https://github.com/taosecurity/starfield-game-settings/issues/new" target="_blank" rel="noopener">Game Settings</a>, <a href="https://github.com/taosecurity/starfield-globals-quests/issues/new" target="_blank" rel="noopener">Globals and Quests</a>, <a href="https://github.com/taosecurity/starfield-record-types/issues/new" target="_blank" rel="noopener">Record Types</a>, <a href="https://github.com/taosecurity/starfield-version-history/issues/new" target="_blank" rel="noopener">Version History</a>, <a href="https://github.com/taosecurity/starfield-scene-hunt/issues/new" target="_blank" rel="noopener">Scene Hunt: The Kneeling Mourner</a>, <a href="https://github.com/taosecurity/starfield-load-order-facts/issues/new" target="_blank" rel="noopener">Load Order Facts: Plugins.txt and Creations</a>, <a href="https://github.com/taosecurity/NexusModsMetrics/issues/new" target="_blank" rel="noopener">Tracking on Nexus Mods</a>, <a href="https://github.com/taosecurity/xbox-top40-tracker/issues/new" target="_blank" rel="noopener">Xbox Top 40 Tracker</a>, <a href="https://github.com/taosecurity/sf-mod-check/issues/new" target="_blank" rel="noopener">sf-mod-check</a>, <a href="https://github.com/taosecurity/papyrus-log-check/issues/new" target="_blank" rel="noopener">papyrus-log-check</a>, <a href="https://github.com/taosecurity/BuildKit/issues/new" target="_blank" rel="noopener">BuildKit</a>, <a href="https://github.com/taosecurity/sf-cut-check/issues/new" target="_blank" rel="noopener">sf-cut-check</a>, <a href="https://github.com/taosecurity/sf-pex-tools/issues/new" target="_blank" rel="noopener">sf-pex-tools</a>, <a href="https://github.com/taosecurity/starfield-agent/issues/new" target="_blank" rel="noopener">starfield-agent</a>, <a href="https://github.com/taosecurity/sf-log-collector/issues/new" target="_blank" rel="noopener">sf-log-collector</a>, <a href="https://github.com/taosecurity/sf-mod-build/issues/new" target="_blank" rel="noopener">sf-mod-build</a>, <a href="https://github.com/taosecurity/sf-load-order/issues/new" target="_blank" rel="noopener">sf-load-order</a>, <a href="https://github.com/taosecurity/sf-save-reader/issues/new" target="_blank" rel="noopener">sf-save-reader</a>, <a href="https://github.com/taosecurity/sf-save-health/issues/new" target="_blank" rel="noopener">sf-save-health</a>, <a href="https://github.com/taosecurity/sf-test-plan/issues/new" target="_blank" rel="noopener">sf-test-plan</a>, <a href="https://github.com/taosecurity/sf-papyrus-ref/issues/new" target="_blank" rel="noopener">sf-papyrus-ref</a>, <a href="https://github.com/taosecurity/sf-patch-day/issues/new" target="_blank" rel="noopener">sf-patch-day</a>, <a href="https://github.com/taosecurity/StarfieldVoiceTool/issues/new" target="_blank" rel="noopener">Voice Tool</a>, <a href="https://github.com/taosecurity/SquareSnap/issues/new" target="_blank" rel="noopener">SquareSnap</a>, <a href="https://github.com/taosecurity/BejView/issues/new" target="_blank" rel="noopener">BejView</a>. A free GitHub account is needed.</li>
+    <li>If you find a mistake or have an idea, open an issue on GitHub for that site: <a href="https://github.com/taosecurity/starfield-console-commands/issues/new" target="_blank" rel="noopener">Console Commands</a>, <a href="https://github.com/taosecurity/starfield-item-ids/issues/new" target="_blank" rel="noopener">Item IDs</a>, <a href="https://github.com/taosecurity/starfield-locations/issues/new" target="_blank" rel="noopener">Locations</a>, <a href="https://github.com/taosecurity/starfield-game-settings/issues/new" target="_blank" rel="noopener">Game Settings</a>, <a href="https://github.com/taosecurity/starfield-globals-quests/issues/new" target="_blank" rel="noopener">Globals and Quests</a>, <a href="https://github.com/taosecurity/starfield-record-types/issues/new" target="_blank" rel="noopener">Record Types</a>, <a href="https://github.com/taosecurity/starfield-version-history/issues/new" target="_blank" rel="noopener">Version History</a>, <a href="https://github.com/taosecurity/starfield-scene-hunt/issues/new" target="_blank" rel="noopener">Scene Hunt: The Kneeling Mourner</a>, <a href="https://github.com/taosecurity/starfield-load-order-facts/issues/new" target="_blank" rel="noopener">Load Order Facts: Plugins.txt and Creations</a>, <a href="https://github.com/taosecurity/starfield-pmt-guide/issues/new" target="_blank" rel="noopener">Using Richard&#x27;s Public Modding Tools</a>, <a href="https://github.com/taosecurity/NexusModsMetrics/issues/new" target="_blank" rel="noopener">Tracking on Nexus Mods</a>, <a href="https://github.com/taosecurity/xbox-top40-tracker/issues/new" target="_blank" rel="noopener">Xbox Top 40 Tracker</a>, <a href="https://github.com/taosecurity/sf-mod-check/issues/new" target="_blank" rel="noopener">sf-mod-check</a>, <a href="https://github.com/taosecurity/papyrus-log-check/issues/new" target="_blank" rel="noopener">papyrus-log-check</a>, <a href="https://github.com/taosecurity/BuildKit/issues/new" target="_blank" rel="noopener">BuildKit</a>, <a href="https://github.com/taosecurity/sf-cut-check/issues/new" target="_blank" rel="noopener">sf-cut-check</a>, <a href="https://github.com/taosecurity/sf-pex-tools/issues/new" target="_blank" rel="noopener">sf-pex-tools</a>, <a href="https://github.com/taosecurity/starfield-agent/issues/new" target="_blank" rel="noopener">starfield-agent</a>, <a href="https://github.com/taosecurity/sf-log-collector/issues/new" target="_blank" rel="noopener">sf-log-collector</a>, <a href="https://github.com/taosecurity/sf-mod-build/issues/new" target="_blank" rel="noopener">sf-mod-build</a>, <a href="https://github.com/taosecurity/sf-load-order/issues/new" target="_blank" rel="noopener">sf-load-order</a>, <a href="https://github.com/taosecurity/sf-save-reader/issues/new" target="_blank" rel="noopener">sf-save-reader</a>, <a href="https://github.com/taosecurity/sf-save-health/issues/new" target="_blank" rel="noopener">sf-save-health</a>, <a href="https://github.com/taosecurity/sf-test-plan/issues/new" target="_blank" rel="noopener">sf-test-plan</a>, <a href="https://github.com/taosecurity/sf-papyrus-ref/issues/new" target="_blank" rel="noopener">sf-papyrus-ref</a>, <a href="https://github.com/taosecurity/sf-patch-day/issues/new" target="_blank" rel="noopener">sf-patch-day</a>, <a href="https://github.com/taosecurity/StarfieldVoiceTool/issues/new" target="_blank" rel="noopener">Voice Tool</a>, <a href="https://github.com/taosecurity/SquareSnap/issues/new" target="_blank" rel="noopener">SquareSnap</a>, <a href="https://github.com/taosecurity/BejView/issues/new" target="_blank" rel="noopener">BejView</a>. A free GitHub account is needed.</li>
   </ul>
 </section>
 <footer>
